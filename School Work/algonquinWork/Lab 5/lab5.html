@@ -1,0 +1,114 @@
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+
+
+<title>Lab 5 - CST8279</title>
+
+
+</head>
+
+<body>
+<h2 align="center">CST 8279 <br>
+   Lab 5</h2>
+<p align="center">version 1.0</p>
+<p>&nbsp;</p>
+<p> It is recommended that you read the entire lab before you start working.</p>
+
+<p><strong>What you will do:</strong></p>
+  <ol>
+    
+    <li>Use import to use Python modules.</li>
+    <li>Call a python function.</li>
+    <li>Code Python functions with arguments, return value and local variables.</li>
+    <li>Use live data from the OC Transpo web site. </li>
+    <li>Use the webbrowser module to start a web browser.</li>
+  </ol>
+  <h3>Task 1: </h3>
+  <ul>
+   <li>This lab is to be done in <strong>Python 2.7</strong></li>
+   <li>Download the script lab5.py to your laptop.</li>
+   <li>Open the script in the text editor of your choice. </li>
+   <li>Open a terminal window and run the lab5.py script.<br>
+      <br>
+      If you get an error message, you may need to install pycurl from the following web site: <a href="https://pypi.python.org/pypi/pycurl">pycurl web site</a>. Make sure you install the version for Python 2.7: pycurl-7.43.0.win32-py2.7.exe </li>
+  </ul>
+  <blockquote>The script lab5.py uses live data from the OC transpo web site to locate the next 3 buses to arrive at a bus stop number.<br>
+     <br>
+     The function getOCdata() does the call to the OC transpo web site. In particular line 7 hard code information needed by the OC Transpo API:<br>
+     - API id<br>
+     - API key<br>
+     - Bus stop number<br>
+     - Route number<br>
+     <br>
+     Right now, the function looks for bus stop #3017 and bus route #86, one of the routes to Algonquin.<br>
+     <br>
+     You need to create your own version of the function getOCdata(). The new function of the function receives two parameters:<br>
+     stopNo and routeNo<br>
+     <br>
+     Line 7 then needs to be modified to use the two input parameters. <br>
+     <br>
+     OC transpo stop numbers and route numbers can be found at the following web site: <a href="http://www.octranspo1.com/maps/">OC transpo maps</a><br>
+     <br>
+     <br><img src="lab5.jpg" width="1174" height="671">
+     <br>
+     Once the function is modified, you modify the function doIt() to:<br><br>- Get the bus stop number from a user (before line 21)<br>- Get the route number from the user (before line 21).<br>- Call your version of the function with the the two arguments. (line 21 to modify)<br><br>Test your code for different route numbers and stop numbers .<br>
+     
+  </blockquote>
+<h3>Task 2</h3>
+  <ul>
+     <li>Line 30 of the original code prints the latitude (l[0]), longitude (l[1]) and start time (l[2]) of the bus.<br>
+        Knowing the latitude and longitude, you can use Google Maps to locate the bus. In order to do so you need to send latitude and longitude to the google maps url as in <br>
+        <br>
+        https://www.google.ca/maps/place//@45.293849,-75.895907,16z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0<br>
+        <br>
+        You now replace line 30 with a call to open a new browser window that locates the bus on the map. Info on the webbrowser control can be found <a href="https://docs.python.org/2/library/webbrowser.html">here</a>.<br>
+        <br>
+        <br>
+     </li>
+     <li>Test your version of the code on different bus routes and stop numbers. Note that it is not a requirement to check for invalid bus routes and/or stop numbers. Sometimes, the GPS data do not show up in the result. In which case, the browser should display your current location. </li>
+  </ul>  
+<h3>Task 3: Submit your lab</h3>
+<ul>
+   <li>Upload the .py file to the Assignment box.</li>
+</ul>
+<h3>Marking Scheme</h3>
+<table width="100%" border="1" cellspacing="2" cellpadding="2">
+  <tr>
+    <td colspan="2"><p><strong>Rubric</strong><br>
+      This lab has a maximum mark of 3, awarded according to the following rubric.</p></td>
+  </tr>
+  <tr>
+    <td><strong>Criteria</strong></td>
+    <td><strong>Mark</strong></td>
+  </tr>
+  <tr>
+    <td>Superior capability. Lab submitted meets or exceeds expected standards</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Satisfactory capability, acceptable product/result</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Marginal capability, substandard product/result</td>
+    <td>1 </td>
+  </tr>
+  <tr>
+    <td>No capability, unacceptable product/result. Work not submitted</td>
+    <td>0</td>
+  </tr>
+</table>
+<p>Note that 40% of your final grade comes from the grades you obtained from your labs and assignments.</p>
+<p>&nbsp;</p>
+<blockquote>
+  <p>&nbsp;</p>
+</blockquote>
+  
+
+
+
+
+
+</body></html>
