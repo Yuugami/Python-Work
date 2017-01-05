@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript, Database &amp; Python Final</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Student Grading Form</h1>
+    <form action="main.py" name="gradeProfile" method="get">
+        <span>First Name:</span>
+        <br>
+        <input type="text" name="fName" id="fName"><span id="fnameAlert"></span>
+        <br>
+        <span>Last Name:</span>
+        <br>
+        <input type="text" name="lName" id="lName"><span id="lnameAlert"></span>
+        <br>
+        <select name="courses" id="courses">
+            <option hidden>Select A Course...</option>
+            <option value="Web Programming">CST8209</option>
+            <option value="Database System and Concepts">CST8260</option>
+            <option value="Intro to Comp. Prog. Using Python">CST8279</option>
+            <option value="Success in Changing Environments">CST8300</option>
+            <option value="Cross-Platform Web Development">MAD9013</option>
+        </select><span id="coursesAlert"></span>
+        <br>
+        <select name="workType" id="workType">
+            <option hidden>Select a Work Type</option>
+            <option value="Assignment">Assignments</option>
+            <option value="Midterm">Midterms</option>
+            <option value="Final Exam">Final Exam</option>
+        </select><span id="workTypeAlert"></span>
+        <br>
+        <span>Grades: </span>
+        <br>
+        <input type="text" name="grade" id="grade"><span id="gradeAlert"></span>
+        <br>
+        <input type="submit" value="Save">
+        <br>
+        <a href="display.py">Display Results</a>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/events.js"></script>
+</body>
+
+</html>
